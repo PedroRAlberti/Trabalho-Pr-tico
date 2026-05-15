@@ -10,7 +10,7 @@ A base de estudo deste trabalho é a implementação de referência presente no 
 
 ## Objetivos de Desenvolvimento
 
-* **Modernização Tecnológica:** Migração e refatoração do código original de Python 2 para Python 3.11+.
+* **Modernização Tecnológica:** Migração e refatoração do código original de Python 2 para Python 3.10+.
 * **Otimização Computacional:** Substituição de estruturas iterativas manuais por operações matriciais vetorizadas utilizando a biblioteca **NumPy**.
 * **Refinamento Arquitetural:** Organização modular das funções de cálculo matemático, lógica de ajuste (*fitting*) e rotinas de visualização.
 
