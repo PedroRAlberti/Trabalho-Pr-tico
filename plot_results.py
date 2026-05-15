@@ -71,26 +71,25 @@ handles = [
 ]
 ax.legend(handles=handles, loc="upper right", fontsize=9)
 plt.tight_layout()
-plt.savefig("fig1_arco.pdf", bbox_inches="tight")
-plt.savefig("fig1_arco.png", dpi=150, bbox_inches="tight")
+plt.savefig("images/fig1_arco.pdf", bbox_inches="tight")
+plt.savefig("images/fig1_arco.png", dpi=150, bbox_inches="tight")
 print("Salvo: fig1_arco.pdf / .png")
 
 
 # Figura 2 — Comparação de tolerâncias (mesmo conjunto de pontos)
 points_s = np.array([
     [0.0,  0.0],
-    [0.5,  1.0],
-    [1.5,  2.0],
-    [2.5,  2.5],
-    [3.5,  2.0],
-    [4.5,  1.0],
-    [5.5,  0.5],
-    [6.5,  1.5],
-    [7.5,  2.5],
-    [8.0,  2.0],
+    [0.3,  2.0],
+    [1.0,  0.2],
+    [1.5,  2.8],
+    [2.2,  0.1],
+    [3.0,  2.5],
+    [3.8,  0.3],
+    [4.5,  2.2],
+    [5.2,  0.0],
 ], dtype=float)
 
-erros = [5, 20, 80]
+erros = [2, 15, 60]
 fig, axes = plt.subplots(1, 3, figsize=(12, 3.5))
 for ax, err in zip(axes, erros):
     plot_result(points_s, max_error=err, ax=ax,
@@ -98,32 +97,32 @@ for ax, err in zip(axes, erros):
 fig.suptitle("Efeito da tolerância sobre o número de segmentos",
              fontsize=11, y=1.02)
 plt.tight_layout()
-plt.savefig("fig2_tolerancias.pdf", bbox_inches="tight")
-plt.savefig("fig2_tolerancias.png", dpi=150, bbox_inches="tight")
+plt.savefig("images/fig2_tolerancias.pdf", bbox_inches="tight")
+plt.savefig("images/fig2_tolerancias.png", dpi=150, bbox_inches="tight")
 print("Salvo: fig2_tolerancias.pdf / .png")
 
 
 # Figura 3 — Contorno irregular com subdivisão recursiva
 points_contorno = np.array([
     [0.0,  0.0],
-    [0.8,  1.8],
-    [1.0,  0.5],
-    [2.0,  2.5],
-    [2.5,  0.2],
-    [3.5,  2.8],
-    [4.0,  0.8],
-    [5.0,  2.0],
-    [5.8,  0.3],
-    [6.5,  1.5],
-    [7.0,  0.0],
+    [0.5,  3.0],
+    [1.0,  0.0],
+    [1.5,  3.0],
+    [2.0,  0.0],
+    [2.5,  3.0],
+    [3.0,  0.0],
+    [3.5,  3.0],
+    [4.0,  0.0],
+    [4.5,  3.0],
+    [5.0,  0.0],
 ], dtype=float)
 
 fig, ax = plt.subplots(figsize=(6, 3.5))
-plot_result(points_contorno, max_error=10, ax=ax,
-            title="Contorno irregular — 11 pontos, max_error = 10")
+plot_result(points_contorno, max_error=2, ax=ax,
+            title="Contorno irregular — 11 pontos, max_error = 2")
 plt.tight_layout()
-plt.savefig("fig3_contorno.pdf", bbox_inches="tight")
-plt.savefig("fig3_contorno.png", dpi=150, bbox_inches="tight")
+plt.savefig("images/fig3_contorno.pdf", bbox_inches="tight")
+plt.savefig("images/fig3_contorno.png", dpi=150, bbox_inches="tight")
 print("Salvo: fig3_contorno.pdf / .png")
 
 plt.show()
